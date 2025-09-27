@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "src/data"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "SKU", name: "sku", widget: "string"}
+      - {label: "Short description", name: "shortDescription", widget: "string"}
+      - {label: "Full description", name: "fullDescription", widget: "text"}
+      - {label: "Images", name: "images", widget: "list", required: false}
+      - {label: "Attributes", name: "attributes", widget: "object", fields: [
+          {label: "CHRA", name: "CHRA", widget: "string"},
+          {label: "Actuator", name: "Actuator", widget: "string"},
+          {label: "Warranty", name: "Warranty", widget: "string"},
+          {label: "Compatible Engines", name: "Compatible Engines", widget: "string"}
+        ]}
