@@ -1,7 +1,7 @@
 // src/pages/product.js
 import React from "react"
 import queryString from "query-string"
-import products from "../data/products.json"
+import products from "../../data/products.json"
 
 const ProductPage = ({ location }) => {
   const params = queryString.parse(location.search)
