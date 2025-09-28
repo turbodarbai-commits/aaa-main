@@ -1,16 +1,20 @@
-// warranty.js
+// src/pages/warranty.js
 
-function showWarrantyPDF(containerId, pdfPath) {
-  const container = document.getElementById(containerId);
-  if (!container) return;
+import React from "react";
 
-  container.innerHTML = `
-    <iframe src="${pdfPath}" width="100%" height="600px" style="border:none;"></iframe>
-  `;
+export default function Warranty() {
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Warranty PDF</h1>
+      <iframe
+        src="/warranty.pdf"   // Place warranty.pdf in the "public" folder
+        width="100%"
+        height="600px"
+        style={{ border: "none" }}
+        title="Warranty Document"
+      />
+    </div>
+  );
 }
 
-// Auto-run on page load
-document.addEventListener("DOMContentLoaded", () => {
-  // Replace "warranty.pdf" with the path/URL of your PDF
-  showWarrantyPDF("warranty-container", "warranty.pdf");
 });
