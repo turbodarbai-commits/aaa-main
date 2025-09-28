@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import logo from "../static/images/turbo.png"
+import logo from "../../static/images/turbo.png"
 
 export default function Home() {
   return (
