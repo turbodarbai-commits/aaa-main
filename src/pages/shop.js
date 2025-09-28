@@ -1,40 +1,49 @@
-// Example snippet to paste into your page where the products map happens
 import React from "react"
-import products from "../data/products.json"  // adjust path if needed
 import { Link } from "gatsby"
 
-const Shop = () => (
-  <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-    <h2 style={{ color: "#e63946", marginLeft: 24 }}>Featured Turbos</h2>
+const products = [
+  {
+    code: "713673-5006S",
+    image: "/images/713673-5006S.png",
+    desc: "Restored turbo • Balanced CHRA • VNT calibrated • 6-month warranty",
+  },
+  {
+    code: "717858-0007",
+    image: "/images/717858-0007.png",
+    desc: "Balanced CHRA • 6-month warranty • Ready to install",
+  },
+  {
+    code: "787556-0017",
+    image: "/images/787556-0017.png",
+    desc: "Restored turbo, balanced, tested",
+  },
+]
 
-    <div className="products-container">
-      {products.map(p => (
-        <div className="product-card" key={p.id}>
-          <div className="product-image-wrap">
-            {/* Use /images/... which maps to static/images/ on Netlify */}
-            <img
-              className="product-img"
-              src={p.images && p.images.length ? p.images[0] : "/images/no-image.jpg"}
-              alt={p.title}
-            />
+export default function Shop() {
+  return (
+    <div className="shop-container">
+      <h1 style={{ textAlign: "center", marginBottom: "32px", color: "#c1002b" }}>
+        Featured Turbos
+      </h1>
+      <div className="shop-grid">
+        {products.map((product) => (
+          <div key={product.code} className="shop-card">
+            <div className="product-image-wrap">
+              <img
+                src={product.image}
+                alt={product.code}
+                className="product-img"
+              />
+            </div>
+            <h3>Turbo Code: {product.code}</h3>
+            <p>{product.desc}</p>
+            <div className="actions">
+              <Link to={`/product?id=${product.code}`}>View Details</Link>
+              <Link to="/request-quote">Request a Quote</Link>
+            </div>
           </div>
-
-          <h3>Turbo Code: {p.sku}</h3>
-          <p style={{ fontSize: "0.9rem", color: "#666", marginBottom: 8 }}>{p.shortDescription}</p>
-
-          <div className="card-footer">
-            <Link to={`/product?id=${encodeURIComponent(p.id)}`} style={{ color: "#e63946", textDecoration: "none", fontWeight: "600" }}>
-              View Details
-            </Link>
-            {" • "}
-            <a href={`/request-quote?sku=${encodeURIComponent(p.sku)}&title=${encodeURIComponent(p.title)}`} style={{ color: "#333", textDecoration: "none", marginLeft: 8 }}>
-              Request a Quote
-            </a>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
-)
-
-export default Shop
+  )
+}
