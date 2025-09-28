@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <header>
-        <img src={logo} alt="Turbo darbai" />
+        <img src={logo} alt="Turbo darbai" style={{ maxHeight: "60px" }} />
         <nav>
           <Link to="/shop">Shop</Link>
           <Link to="/request-quote">Request a Quote</Link>
@@ -21,15 +21,28 @@ export default function Home() {
 
       <section className="section">
         <h2>Featured Turbos</h2>
-        <div className="cards">
-          <div className="card">
-            <img src="/images/713673-5006S.png" alt="Turbo 713673-5006S" />
+        <div className="products-container">
+          <div className="product-card">
+            <div className="product-image-wrap">
+              <img
+                className="product-img"
+                src="/images/713673-5006S.png"
+                alt="Turbo 713673-5006S"
+              />
+            </div>
             <h3>Turbo Code: 713673-5006S</h3>
             <p>VW Passat 1.9 TDI • Balanced & Calibrated</p>
             <Link to="/product?id=713673-5006S">View Details</Link>
           </div>
-          <div className="card">
-            <img src="/images/717858-0007.png" alt="Turbo 717858-0007" />
+
+          <div className="product-card">
+            <div className="product-image-wrap">
+              <img
+                className="product-img"
+                src="/images/717858-0007.png"
+                alt="Turbo 717858-0007"
+              />
+            </div>
             <h3>Turbo Code: 717858-0007</h3>
             <p>Audi A4 2.0 TDI • Ready to Install</p>
             <Link to="/product?id=717858-0007">View Details</Link>
