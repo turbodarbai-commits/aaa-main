@@ -6,8 +6,8 @@
     "shortDescription": "Restored turbo • Balanced CHRA • VNT calibrated • 6-month warranty",
     "fullDescription": "Rebuilt with new bearings, cleaned housings, and full VNT actuator calibration. Fits many VW/Audi/Skoda 1.9 TDI engines.",
     "images": [
-      "/images/713673-5006S-1.jpg",
-      "/images/713673-5006S-2.jpg"
+      "/images/713673-5006S.png",
+      "/images/713673-5006S.png"
     ],
     "attributes": {
       "CHRA": "GT1749V",
@@ -24,7 +24,7 @@
     "sku": "717858-0007",
     "shortDescription": "Balanced CHRA • 6-month warranty • Ready to install",
     "fullDescription": "Balanced and tested, includes new gaskets. Ready to ship.",
-    "images": ["/images/717858-0007-1.jpg"],
+    "images": ["/images/717858-0007.png"],
     "attributes": { "Actuator": "Vacuum", "Warranty": "6 months" },
     "price": ""
   },
@@ -34,7 +34,7 @@
     "sku": "787556-0017",
     "shortDescription": "Restored turbo, balanced, tested",
     "fullDescription": "Balanced CHRA, gear and seal checked, 6-month warranty.",
-    "images": ["/images/787556-0017-1.jpg"],
+    "images": ["/images/787556-0017.png"],
     "attributes": { "Actuator": "Vacuum", "Warranty": "6 months" },
     "price": ""
   }
