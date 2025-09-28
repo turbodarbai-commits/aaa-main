@@ -23,13 +23,13 @@ export default function Home() {
         <h2>Featured Turbos</h2>
         <div className="cards">
           <div className="card">
-            <img src="/images/713673-5006S-1.jpg" alt="Turbo 713673-5006S" />
+            <img src="/images/713673-5006S.png" alt="Turbo 713673-5006S" />
             <h3>Turbo Code: 713673-5006S</h3>
             <p>VW Passat 1.9 TDI • Balanced & Calibrated</p>
             <Link to="/product?id=713673-5006S">View Details</Link>
           </div>
           <div className="card">
-            <img src="/images/717858-0007-1.jpg" alt="Turbo 717858-0007" />
+            <img src="/images/717858-0007.png" alt="Turbo 717858-0007" />
             <h3>Turbo Code: 717858-0007</h3>
             <p>Audi A4 2.0 TDI • Ready to Install</p>
             <Link to="/product?id=717858-0007">View Details</Link>
