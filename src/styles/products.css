@@ -1,27 +1,53 @@
-.products-grid {
+.shop-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.shop-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
-  padding: 20px;
 }
 
-.product-card {
-  text-align: center;
-  padding: 20px;
-  border-radius: 12px;
+.shop-card {
   background: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  padding: 18px;
+  text-align: center;
+  transition: transform .15s ease, box-shadow .15s ease;
 }
 
-.product-card:hover {
-  transform: scale(1.03);
+.shop-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 
-.product-card img {
-  width: 220px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 10px auto;
+.shop-card h3 {
+  font-size: 1.2rem;
+  margin: 12px 0;
+}
+
+.shop-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.shop-card .actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.shop-card .actions a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #c1002b;
+  transition: color .2s;
+}
+
+.shop-card .actions a:hover {
+  color: #900020;
 }
