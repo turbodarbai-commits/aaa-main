@@ -7,7 +7,7 @@ export default function Warranty() {
     <div style={{ padding: "20px" }}>
       <h1>Warranty PDF</h1>
       <iframe
-        src="/warranty.pdf"   // Place warranty.pdf in the "public" folder
+        src="/warranty.pdf"   // make sure warranty.pdf is in the "public" folder
         width="100%"
         height="600px"
         style={{ border: "none" }}
@@ -16,5 +16,3 @@ export default function Warranty() {
     </div>
   );
 }
-
-});
