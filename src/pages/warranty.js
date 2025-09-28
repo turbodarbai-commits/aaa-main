@@ -8,3 +8,4 @@
   <iframe src="warranty.pdf" width="100%" height="600px"></iframe>
 </body>
 </html>
+export default
